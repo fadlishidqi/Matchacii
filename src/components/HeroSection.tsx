@@ -106,13 +106,13 @@ export default function HeroSection() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 animate-spin"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12 animate-ping"></div>
 
-          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">"</div>
+          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">&ldquo;</div>
           <p className="relative text-white text-md leading-relaxed font-medium pl-6">
             MATCHACII kini sedang dalam proses ekspansi menuju{" "}
             <span className="font-black bg-white/20 px-2 py-1 rounded-lg">50 cabang di Indonesia</span>, dengan visi
             menjadi pelopor street matcha berkualitas tinggi dan layanan kemitraan terbaik.
           </p>
-          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">"</div>
+          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">&rdquo;</div>
         </div>
       </div>
 
@@ -146,7 +146,7 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-amber-400 to-orange-400 rounded-xl p-4 shadow-lg">
             <p className="text-white text-sm font-semibold">
               <span className="font-medium">CV. Arshaka Trisha Wasana Cidra</span> sudah berpengalaman lebih dari{" "}
-              <span className="bg-white/20 px-2 py-1 rounded-lg font-bold">4 tahun di dunia F&B</span>
+              <span className="bg-white/20 px-2 py-1 rounded-lg font-bold">4 tahun di dunia F&amp;B</span>
             </p>
           </div>
         </div>
@@ -167,8 +167,8 @@ export default function HeroSection() {
                 Visi Kemitraan MATCHACII:
               </h3>
               <p className="text-white/95 text-md leading-relaxed font-medium">
-                "Membangun jaringan street matcha yang solid, profesional, dan terus tumbuh bersama generasi muda
-                pebisnis di Indonesia sadar akan kualitas, cita rasa, dan pengalaman yang autentik."
+                &ldquo;Membangun jaringan street matcha yang solid, profesional, dan terus tumbuh bersama generasi muda
+                pebisnis di Indonesia sadar akan kualitas, cita rasa, dan pengalaman yang autentik.&rdquo;
               </p>
             </div>
           </div>

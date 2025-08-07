@@ -59,7 +59,7 @@ export default function PricingSection() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 animate-spin"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12 animate-ping"></div>
 
-          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">"</div>
+          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">&ldquo;</div>
           <div className="relative text-center">
             <h3 className="text-white text-xl font-black mb-4 leading-tight">
               Harga Jual Resmi
@@ -72,7 +72,7 @@ export default function PricingSection() {
               MATCHACII menerapkan sistem harga jual yang seragam di seluruh Indonesia.
             </p>
           </div>
-          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">"</div>
+          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">&rdquo;</div>
         </div>
       </div>
 

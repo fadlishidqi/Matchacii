@@ -52,7 +52,7 @@ export default function MenuSection() {
   useEffect(() => {
     if (isVisible) startAutoSlide()
     return stopAutoSlide
-  }, [isVisible])
+  }, [isVisible, startAutoSlide]) // Added startAutoSlide to deps
 
   const resetAutoSlide = () => {
     stopAutoSlide()
@@ -85,9 +85,9 @@ export default function MenuSection() {
     scrollToIndex(newIndex)
   }
 
-  const handleDotClick = (index: number) => {
+  const handleDotClick = (dotIndex: number) => { // renamed from index to dotIndex
     resetAutoSlide()
-    scrollToIndex(index)
+    scrollToIndex(dotIndex)
   }
 
   const handleScroll = () => {
@@ -122,13 +122,14 @@ export default function MenuSection() {
 
       {/* Menu Description */}
       <div className={`mb-8 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        
-          <p className="text-gray-700 text-md text-center font-medium">
-            Semua menu MATCHACII menggunakan<span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg">
-              100% pure matcha grade premium
-            </span>yang memberikan rasa autentik dan kaya akan antioksidan.
-          </p>
-        </div>
+        <p className="text-gray-700 text-md text-center font-medium">
+          Semua menu MATCHACII menggunakan
+          <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg">
+            100% pure matcha grade premium
+          </span>
+          yang memberikan rasa autentik dan kaya akan antioksidan.
+        </p>
+      </div>
 
       {/* Carousel */}
       <div className={`mb-8 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -160,7 +161,7 @@ export default function MenuSection() {
             style={{ scrollSnapType: 'x mandatory' }}
             onScroll={handleScroll}
           >
-            {menus.map((menu, index) => (
+            {menus.map((menu) => (
               <div
                 key={menu.id}
                 className="flex-shrink-0 w-64 bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl border border-white/50 hover:shadow-2xl hover:scale-105 transition-all duration-500"
@@ -179,12 +180,12 @@ export default function MenuSection() {
 
           {/* Dots */}
           <div className="flex justify-center space-x-2 mt-6">
-            {menus.map((_, index) => (
+            {menus.map((_, dotIndex) => (
               <button
-                key={index}
-                onClick={() => handleDotClick(index)}
+                key={dotIndex}
+                onClick={() => handleDotClick(dotIndex)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  currentIndex === index
+                  currentIndex === dotIndex
                     ? 'bg-emerald-500 scale-125'
                     : 'bg-gray-300 hover:bg-emerald-300'
                 }`}
@@ -199,7 +200,7 @@ export default function MenuSection() {
         <div className="relative bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 rounded-2xl p-6 overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 animate-spin"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12 animate-ping"></div>
-          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">"</div>
+          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">&ldquo;</div>
           <div className="relative text-center">
             <h3 className="text-white text-xl font-black mb-4 leading-tight">
               🍃 Menu Instagramable
@@ -212,7 +213,7 @@ export default function MenuSection() {
               dan visual yang menarik untuk media sosial.
             </p>
           </div>
-          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">"</div>
+          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">&rdquo;</div>
         </div>
       </div>
 

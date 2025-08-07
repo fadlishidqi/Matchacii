@@ -59,7 +59,7 @@ export default function ClosingSection() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 animate-spin"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12 animate-ping"></div>
 
-          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">"</div>
+          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">&ldquo;</div>
           <div className="relative text-center">
             <h3 className="text-white text-2xl font-black mb-4 leading-tight">
               Wujudkan Bisnis Impianmu
@@ -68,16 +68,16 @@ export default function ClosingSection() {
               </span>
             </h3>
             <p className="text-white/95 text-sm leading-relaxed font-medium mb-4">
-              Slot kemitraan sangat terbatas — segera ambil bagian dalam bisnis matcha premium 
+              Slot kemitraan sangat terbatas &mdash; segera ambil bagian dalam bisnis matcha premium 
               yang sedang naik daun!
             </p>
             <div className="bg-white/20 rounded-lg p-3 mt-4">
               <p className="text-white font-bold text-md">
-                MATCHACII.SMG — Finest Street Matcha, bukan matcha sembarangan!
+                MATCHACII.SMG &mdash; Finest Street Matcha, bukan matcha sembarangan!
               </p>
             </div>
           </div>
-          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">"</div>
+          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">&rdquo;</div>
         </div>
       </div>
 

@@ -1,8 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
-import Image from "next/image"
 
-export default function TestimoniSection() {
+export default function PricingSection() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -15,33 +14,16 @@ export default function TestimoniSection() {
       { threshold: 0.1 }
     )
 
-    const element = document.getElementById('testimoni-section')
+    const element = document.getElementById('pricing-section')
     if (element) observer.observe(element)
 
     return () => observer.disconnect()
   }, [])
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Mitra Jakarta",
-      text: "Waktu pertama kali buka booth, aku nggak nyangka bisa sold out dalam 3 jam. Bahkan, ada customer yang rela nungguin batch kedua dibuka. Ini pengalaman jualan paling menyenangkan!",
-      image: "/images/MITRA.png",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Mitra Bandung", 
-      text: "MATCHACII beda sama brand lain. Stoknya selalu aman, komunikasi sama tim pusat juga enak. Aku ngerasa beneran dibimbing dan dihargai sebagai mitra.",
-      image: "/images/MITRA.png",
-      rating: 5
-    }
-  ]
-
   return (
     <section
-      id="testimoni-section"
-      className="bg-gradient-to-br from-emerald-50 via-emerald-50 to-green-50 px-6 py-6 max-w-md mx-auto relative overflow-hidden"
+      id="pricing-section"
+      className="bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 px-6 py-2 max-w-md mx-auto relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -61,74 +43,65 @@ export default function TestimoniSection() {
       <div className={`text-center mb-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="relative inline-block">
           <h2 className="text-3xl font-black text-gray-900 mb-2 leading-tight transform -rotate-1">
-            Real Voices
+            Fixed Pricing
           </h2>
           <div className="relative -mt-1 ml-8">
             <div className="inline-block bg-emerald-500 text-white px-6 py-2 font-medium text-sm transform -rotate-1 shadow-lg">
-              Mitra MATCHACII.SMG Speak Up!
+              Harga Jual Seragam dari Pusat
             </div>
           </div>
         </div>
       </div>
 
-      {/* Testimonials */}
-      <div className="space-y-6 mb-8">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={testimonial.id}
-            className={`transition-all duration-1000 delay-${300 + (index * 200)} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-          >
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-white/50 hover:shadow-2xl hover:scale-105 transition-all duration-500 group relative overflow-hidden">
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-emerald-100/50 rounded-full -translate-y-10 translate-x-10 group-hover:scale-110 transition-transform duration-500"></div>
-              
-              {/* Quote icon */}
-              <div className="absolute top-4 left-4 text-emerald-500/20 text-4xl font-serif">"</div>
-              
-              {/* Content */}
-              <div className="relative">
-                {/* Stars Rating */}
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">⭐</span>
-                  ))}
-                </div>
+      {/* Main Message */}
+      <div className={`mb-6 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className="relative bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 rounded-2xl p-6 shadow-2xl shadow-emerald-500/30 overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 animate-spin"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12 animate-ping"></div>
 
-                {/* Testimonial Text */}
-                <blockquote className="text-gray-700 text-md leading-relaxed font-medium mb-6 px-4">
-                  "{testimonial.text}"
-                </blockquote>
-
-                {/* Mitra Info - Aligned Left */}
-                <div className="flex items-center space-x-4 px-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg border-2 border-white">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      width={48}
-                      height={48}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-sm">{testimonial.name}</p>
-                    <p className="text-emerald-600 text-xs font-medium">Partner MATCHACII</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom quote */}
-              <div className="absolute bottom-4 right-4 text-emerald-500/20 text-4xl font-serif rotate-180">"</div>
-            </div>
+          <div className="absolute top-4 left-4 text-white/30 text-4xl font-serif">&ldquo;</div>
+          <div className="relative text-center">
+            <h3 className="text-white text-xl font-black mb-4 leading-tight">
+              Harga Jual Resmi
+              <span className="block text-lg font-medium bg-white/20 px-3 py-1 rounded-lg mt-2">
+                Ditetapkan oleh Pusat
+              </span>
+            </h3>
+            <p className="text-white/95 text-sm leading-relaxed font-medium">
+              Untuk memastikan tidak adanya persaingan harga antar mitra, 
+              MATCHACII menerapkan sistem harga jual yang seragam di seluruh Indonesia.
+            </p>
           </div>
-        ))}
+          <div className="absolute bottom-4 right-4 text-white/30 text-4xl font-serif rotate-180">&rdquo;</div>
+        </div>
       </div>
 
-      {/* CTA */}
-      <div className={`text-center mt-8 transition-all duration-1000 delay-900 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <p className="text-xs text-gray-500 font-medium mt-3">
-          Jadilah bagian dari <span className="font-bold text-emerald-600">success story</span> berikutnya
-        </p>
+      {/* Benefits List */}
+      <div className={`mb-4 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/50">
+          <h3 className="font-black text-gray-900 text-lg mb-6 text-center">
+            Mitra Wajib Mengikuti Harga Jual Agar:
+          </h3>
+
+          <div className="space-y-4">
+            {[
+              "Tidak terjadi banting harga antar mitra",
+              "Menjaga nilai brand tetap tinggi dan stabil",
+              "Menjamin kepercayaan konsumen di berbagai daerah",
+              "Menumbuhkan ekosistem mitra yang saling support, bukan saling saing"
+            ].map((benefit, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-4 p-4 bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl border border-emerald-200/50 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-md font-bold">✓</span>
+                </div>
+                <span className="text-gray-800 text-md font-semibold flex-1">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
