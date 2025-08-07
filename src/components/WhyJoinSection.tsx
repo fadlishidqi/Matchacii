@@ -42,7 +42,7 @@ export default function WhyJoinSection() {
       </div>
 
       {/* Section Title - Positioned higher */}
-      <div className={`text-center mb-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+      <div className={`text-center mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="relative inline-block">
           <h2 className="text-3xl font-black text-gray-900 mb-2 leading-tight transform -rotate-1">
             Apa yang didapat?

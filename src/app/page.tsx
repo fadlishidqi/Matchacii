@@ -1,6 +1,7 @@
 import HeroSection from '@/components/HeroSection';
 import TestimoniSection from '@/components/TestimoniSection';
 import WhyJoinSection from '@/components/WhyJoinSection';
+import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <WhyJoinSection />
       <TestimoniSection />
+      <ContactSection />
     </main>
   );
 }
