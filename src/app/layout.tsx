@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} antialiased bg-white font-poppins`}>
         <div className="max-w-md mx-auto bg-white min-h-screen relative">
           {children}
+          <FloatingCTA />
         </div>
       </body>
     </html>
